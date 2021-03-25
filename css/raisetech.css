@@ -1,0 +1,554 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a {
+  display: block;
+}
+
+body {
+  font-family: "Noto Sans JP",MyYuGothicM,YuGothic,-apple-system,BlinkMacSystemFont,"Hiragino kaku Gothic ProN",Meiryo,Verdana,arial,helvetica,sans-serif;
+}
+
+header {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+@media (max-width: 1200px) {
+  header {
+    height: 50px;
+  }
+}
+
+header .left .header-logo a {
+  height: 70px;
+  color: #131d34;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 21px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1200px) {
+  header .left .header-logo a {
+    height: 50px;
+    padding-left: 10px;
+  }
+}
+
+header .left .header-logo a img {
+  vertical-align: middle;
+}
+
+@media (max-width: 1200px) {
+  header .left .header-logo a img {
+    height: 30px;
+  }
+}
+
+header .left .header-logo a p {
+  padding-left: 16px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+@media (max-width: 1290px) {
+  header .left .header-logo a p {
+    display: none;
+  }
+}
+
+header .left .header-logo a p > span {
+  font-size: 1.8rem;
+}
+
+header .right {
+  height: 70px;
+}
+
+@media (max-width: 1200px) {
+  header .right {
+    display: none;
+  }
+}
+
+header .right .nav {
+  line-height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+header .right .nav .drop-btn {
+  position: relative;
+}
+
+header .right .nav .drop-btn a {
+  padding: 0px 15px;
+  color: #131d34;
+  height: 70px;
+}
+
+@media (max-width: 1260px) {
+  header .right .nav .drop-btn a {
+    padding: 0 10px;
+  }
+}
+
+header .right .nav .drop-btn a:hover {
+  background-color: #d4f1f8;
+}
+
+header .right .nav .drop-btn .submenu {
+  line-height: 37px;
+  display: none;
+  position: absolute;
+  top: 70;
+  white-space: nowrap;
+  background-color: #e9f8fb;
+}
+
+header .right .nav .drop-btn .submenu li {
+  font-weight: 400;
+}
+
+header .right .nav .drop-btn .submenu li a {
+  position: relative;
+  height: auto;
+  padding: 10px 60px 10px 15px;
+}
+
+header .right .nav .drop-btn .submenu li a:hover {
+  background-color: #fff;
+  color: #2498b3;
+}
+
+header .right .nav .nondrop a {
+  padding: 0px 15px;
+  color: #131d34;
+  height: 70px;
+}
+
+header .right .nav .nondrop a:hover {
+  background-color: #d4f1f8;
+}
+
+header .right .nav .last-btn a {
+  padding: 0px 15px;
+  background-color: #2498b3;
+  color: #fff;
+  height: 70px;
+}
+
+@media (max-width: 1260px) {
+  header .right .nav .last-btn a {
+    padding: 0 10px;
+  }
+}
+
+header .ham-btn {
+  display: none;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  header .ham-btn {
+    display: block;
+  }
+}
+
+header .ham-btn__line {
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  background-color: #2498b3;
+  width: 23px;
+  height: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header .ham-btn__line:nth-of-type(1) {
+  top: 15px;
+}
+
+header .ham-btn__line:nth-of-type(2) {
+  top: 24px;
+}
+
+header .ham-btn__line:nth-of-type(3) {
+  top: 33px;
+}
+
+header .ham-btn.active {
+  background-color: #2498b3;
+}
+
+header .ham-btn.active .ham-btn__line {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header .ham-btn.active .ham-btn__line:nth-of-type(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #fff;
+  top: 24px;
+}
+
+header .ham-btn.active .ham-btn__line:nth-of-type(2) {
+  width: 0px;
+}
+
+header .ham-btn.active .ham-btn__line:nth-of-type(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-color: #fff;
+  top: 24px;
+}
+
+header .h-nav {
+  display: none;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+
+header .h-nav .h-menu {
+  background-color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+header .h-nav .h-menu > a {
+  position: relative;
+  padding: 11.5px 0 11.5px 10px;
+  color: #131d34;
+}
+
+header .h-nav .h-menu > a:hover {
+  background-color: #f3fafb;
+}
+
+header .h-nav .h-menu > a::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  content: "";
+  width: 24px;
+  height: 2px;
+  background-color: #121212;
+}
+
+header .h-nav .h-menu .h-submenu {
+  display: none;
+}
+
+header .h-nav .h-menu .h-submenu li {
+  font-weight: 400;
+}
+
+header .h-nav .h-menu .h-submenu li a {
+  padding: 11.5px 0 11.5px 25px;
+  color: #131d34;
+}
+
+header .h-nav .h-menu .h-submenu li a:hover {
+  background-color: #f3fafb;
+}
+
+header .h-nav .h-singlemenu {
+  background-color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+header .h-nav .h-singlemenu > a {
+  padding: 11.5px 0 11.5px 10px;
+  color: #131d34;
+}
+
+header .h-nav .h-singlemenu > a:hover {
+  background-color: #f3fafb;
+}
+
+header .h-nav .close {
+  position: relative;
+}
+
+header .h-nav .close > a::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  content: "";
+  width: 2px;
+  height: 24px;
+  background-color: #121212;
+  margin-top: -11px;
+}
+
+main .layer3 {
+  height: 720px;
+  overflow: hidden;
+  padding-top: 35px;
+  position: relative;
+  background: url(https://raise-tech.net/wp-content/themes/raisetech2019/./common/img/bg-hero3.png) fixed no-repeat center center/cover;
+}
+
+@media (max-width: 1200px) {
+  main .layer3 {
+    padding-top: 25px;
+    height: 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  main .layer3 {
+    top: 50px;
+    padding-top: 0px;
+    height: 300px;
+    padding-bottom: 320px;
+    background-position: center -25px;
+  }
+}
+
+main .layer3 .stackimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+main .layer3 .layer1 {
+  background: url(https://raise-tech.net/wp-content/themes/raisetech2019/./common/img/bg-hero1.png) no-repeat center center;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 80px;
+}
+
+@media (max-width: 767px) {
+  main .layer3 .layer1 {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    background-size: cover;
+    background-position: center -30px;
+  }
+}
+
+main .layer3 .layer1 .innerbox {
+  margin-top: 35px;
+  background-color: #fff;
+  padding: 43px 40px 11px 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  main .layer3 .layer1 .innerbox {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  main .layer3 .layer1 .innerbox {
+    width: 100%;
+    max-width: 100%;
+    padding: 9px 0 13px;
+    border-radius: 0;
+  }
+}
+
+main .layer3 .layer1 .innerbox .innerlogo img {
+  margin-bottom: 0.4rem;
+  width: 280px;
+}
+
+@media (max-width: 767px) {
+  main .layer3 .layer1 .innerbox .innerlogo img {
+    display: none;
+  }
+}
+
+main .layer3 .layer1 .innerbox p {
+  margin: 1.3rem 0 1.5rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.7rem;
+}
+
+@media (max-width: 767px) {
+  main .layer3 .layer1 .innerbox p {
+    margin: 0.67rem 0;
+    font-size: 1.3rem;
+    line-height: 1.68;
+  }
+}
+
+main .layer3 .layer1 .innerbox .innerbtn {
+  display: inline-block;
+}
+
+main .layer3 .layer1 .innerbox .innerbtn a {
+  padding: 21px 38px;
+  background-color: #2498b3;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  main .layer3 .layer1 .innerbox .innerbtn a {
+    font-size: 1.6rem;
+    padding: 9px 18px;
+    font-weight: 900;
+  }
+}
+
+main .layer3 .layer2 {
+  width: 100%;
+  background: url(https://raise-tech.net/wp-content/themes/raisetech2019/./common/img/bg-hero2.png) no-repeat center center;
+  z-index: 100;
+}
+
+@media (max-width: 767px) {
+  main .layer3 .layer2 {
+    background-size: cover;
+    background-position: center -25px;
+  }
+}
+
+main .back-black {
+  background-color: black;
+  padding-bottom: 68px;
+  z-index: 1000;
+}
+
+main .back-black .bottom .bottom-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -200px;
+}
+
+@media (max-width: 1035px) {
+  main .back-black .bottom .bottom-contents {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  main .back-black .bottom .bottom-contents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+    padding-top: 105px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+main .back-black .bottom .bottom-contents .content {
+  z-index: 700;
+  text-align: center;
+  width: 229px;
+  margin: 0 50px;
+}
+
+@media (max-width: 1035px) {
+  main .back-black .bottom .bottom-contents .content {
+    width: 30%;
+    margin: 0 2%;
+  }
+}
+
+@media (max-width: 767px) {
+  main .back-black .bottom .bottom-contents .content {
+    width: auto;
+    margin: 10px 0 30px;
+  }
+}
+
+main .back-black .bottom .bottom-contents .content .icon {
+  width: 230px;
+  height: 230px;
+  background-color: #fff;
+  border: solid 6px black;
+  border-radius: 50%;
+}
+
+@media (max-width: 1035px) {
+  main .back-black .bottom .bottom-contents .content .icon {
+    margin: auto;
+  }
+}
+
+main .back-black .bottom .bottom-contents .content .icon i {
+  padding-top: 56px;
+  -webkit-text-stroke: 3px #fff;
+}
+
+main .back-black .bottom .bottom-contents .content .content-ttl {
+  color: #fff;
+  margin: 0.8rem 0 0 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+main .back-black .bottom .bottom-contents .content .content-description {
+  color: #fff;
+  margin: 0.5em 0 0 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.7;
+}
+/*# sourceMappingURL=raisetech.css.map */
